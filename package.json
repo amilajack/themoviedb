@@ -1,20 +1,18 @@
 {
-  "name": "thepiratebay",
-  "version": "1.3.1",
-  "description": "The pirate bay client",
-  "homepage": "http://github.com/t3chnoboy/thepiratebay",
-  "repository": "git://github.com/t3chnoboy/thepiratebay.git",
-  "author": "Dmitry Mazuro <dmitry.mazuro@icloud.com>",
+  "name": "themoviedb",
+  "version": "0.0.1",
+  "description": "themoviedb API client",
+  "homepage": "http://github.com/amilajack/themoviedb",
+  "repository": "git://github.com/amilajack/themoviedb.git",
+  "author": "Amila Welihinda <amiajack@gmail.com>",
   "main": "index.js",
   "browser": {
-    "index.js": "./lib/thepiratebay.js"
+    "index.js": "./lib/api.js"
   },
   "keywords": [
-    "thepiratebay",
-    "pirate bay",
-    "torrent",
-    "client",
-    "scraper"
+    "themoviedb",
+    "api",
+    "json"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir lib && npm run build-web",
@@ -58,8 +56,8 @@
     "url-parse": "^1.1.6"
   },
   "engines": {
-    "node": "4.x || 6.x",
-    "npm": "2.x || 3.x"
+    "node": ">=4.x",
+    "npm": ">=3.x"
   },
   "devEngines": {
     "node": ">=4.x",
