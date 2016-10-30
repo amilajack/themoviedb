@@ -1,0 +1,31 @@
+{
+  "parser": "babel-eslint",
+  "extends": "airbnb",
+  "env": {
+    "mocha": true,
+    "node": true
+  },
+  "rules": {
+    "arrow-parens": 0,
+    "no-underscore-dangle": 0,
+    "eol-last": 0,
+    "react/require-extension": 0,
+    "generator-star-spacing": 0,
+    "no-bitwise": 0,
+    "no-prototype-builtins": 0,
+    comma-dangle: ["error", "never"],
+    "import/no-extraneous-dependencies": ["off"],
+    "consistent-return": 0,
+    "immutable/no-let": 1,
+    "immutable/no-this": 0,
+    "immutable/no-mutation": 0
+  },
+  "plugins": [
+    "immutable"
+  ],
+  "settings": {
+    "webpack": {
+      "config": "webpack.config.eslint.js"
+    }
+  }
+}
