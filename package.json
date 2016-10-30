@@ -7,18 +7,19 @@
   "author": "Amila Welihinda <amiajack@gmail.com>",
   "main": "index.js",
   "browser": {
-    "index.js": "./lib/api.js"
+    "index.js": "./dist/api.js"
   },
   "keywords": [
     "themoviedb",
+    "client",
     "api",
     "json"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel src --out-dir lib && npm run build-web",
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist && npm run build-web",
     "build-web": "cross-env NODE_ENV=production node -r babel-register ./node_modules/webpack/bin/webpack --config webpack.config.js --progress --profile --colors --display-error-details",
-    "clean": "rm -rf lib",
-    "lint": "cross-env NODE_ENV=test eslint src test",
+    "clean": "rm -rf dist",
+    "lint": "cross-env NODE_ENV=test eslint --cache --ignore-path .gitignore --format=node_modules/eslint-formatter-pretty src test",
     "precommit": "npm test",
     "spec": "cross-env NODE_ENV=test mocha --timeout 30000 --inline-diffs --async-only --growl --compilers js:babel-register --recursive --require ./test/setup.js test/*.spec.js",
     "test": "cross-env NODE_ENV=test npm-check --production && npm run lint && npm run spec && npm run build",
@@ -39,6 +40,7 @@
     "cross-env": "^3.1.3",
     "eslint": "^3.9.0",
     "eslint-config-airbnb": "^12.0.0",
+    "eslint-formatter-pretty": "^1.1.0",
     "eslint-plugin-immutable": "^1.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
@@ -51,9 +53,7 @@
   },
   "dependencies": {
     "babel-runtime": "^6.18.0",
-    "cheerio": "github:cheeriojs/cheerio#e65ad72",
-    "isomorphic-fetch": "^2.2.1",
-    "url-parse": "^1.1.6"
+    "isomorphic-fetch": "^2.2.1"
   },
   "engines": {
     "node": ">=4.x",

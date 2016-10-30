@@ -1,1 +1,1 @@
-module.exports = require('./lib/Api').default;
+module.exports = require('./dist/Api').default;

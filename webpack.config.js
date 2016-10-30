@@ -19,7 +19,7 @@ export default {
   },
   entry: './browser.js',
   output: {
-    path: path.join(__dirname, 'lib'),
+    path: path.join(__dirname, 'dist'),
     filename: 'themoviedb.js',
     libraryTarget: 'umd',
     library: 'themoviedb',
