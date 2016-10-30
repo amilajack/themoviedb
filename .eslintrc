@@ -12,19 +12,19 @@
     "comma-dangle": ["error", "never"],
     "consistent-return": 2,
     "func-names": 2,
-    # "fp/no-class": "error",             # TODO: In progress
+    "fp/no-class": "error",
     "fp/no-delete": "error",
     "fp/no-events": "error",
     "fp/no-let": "error",
     "fp/no-loops": "error",
     "fp/no-mutating-assign": "error",
-    "flowtype-errors/show-errors": 1,
-    # "fp/no-mutation": "error",          # TODO: In progress
-    # "fp/no-nil": "error",               # TODO: In progress
-    # "fp/no-proxy": "error",             # TODO: In progress
-    # "fp/no-this": "error",              # TODO: In progress
+    "flowtype-errors/show-errors": 2,
+    "fp/no-mutation": "error",
+    "fp/no-nil": "error",
+    "fp/no-proxy": "error",
+    "fp/no-this": "error",
     # "fp/no-throw": "error",             # TODO: In progress
-    # "fp/no-unused-expression": "error", # TODO: In progress
+    "fp/no-unused-expression": "error",
     "generator-star-spacing": [0],        # HACK: https://github.com/airbnb/javascript/issues/948
     "import/no-extraneous-dependencies": ["off"],
     "import/extensions": 0,
