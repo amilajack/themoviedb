@@ -6,10 +6,7 @@
   "homepage": "http://github.com/amilajack/themoviedb",
   "repository": "git://github.com/amilajack/themoviedb.git",
   "author": "Amila Welihinda <amiajack@gmail.com>",
-  "main": "index.js",
-  "browser": {
-    "index.js": "./dist/api.js"
-  },
+  "main": "./dist",
   "keywords": [
     "themoviedb",
     "client",
@@ -20,18 +17,19 @@
     "build": "cross-env NODE_ENV=production babel src --out-dir dist",
     "clean": "rm -rf dist",
     "flow-typed": "flow-typed install",
-    "lint": " eslint .",
-    "precommit": "npm test",
-    "spec": "cross-env NODE_ENV=test jest .",
+    "lint": " eslint . --ignore-path .gitignore",
+    "precommit": "yarn test",
+    "spec": "jest .",
     "test": "cross-env NODE_ENV=test yarn lint && yarn spec && yarn build",
     "version": "yarn build"
   },
   "devDependencies": {
     "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
+    "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/register": "^7.0.0",
+    "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
@@ -39,10 +37,10 @@
     "eslint-config-bliss": "^2.3.0",
     "flow-bin": "^0.82.0",
     "flow-typed": "^2.5.1",
-    "husky": "^1.1.1"
+    "husky": "^1.1.1",
+    "regenerator-runtime": "^0.12.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.0.0",
     "isomorphic-fetch": "^2.2.1"
   },
   "engines": {
