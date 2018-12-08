@@ -1,3 +1,6 @@
 {
-  "extends": "bliss"
+  "extends": "bliss",
+  "rules": {
+    "flowtype-errors/show-errors": "warn"
+  }
 }

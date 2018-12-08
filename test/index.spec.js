@@ -1,10 +1,13 @@
 import dotenv from 'dotenv';
-import { setup } from '../src';
+import OpenVpn from '../src';
 
 dotenv.config();
 
 describe('basic', () => {
-  it('should setup()', () => {
-    setup(process.env.THE_MOVIE_DB_API_KEY);
+  it('should setup()', async () => {
+    const vpn = new OpenVpn();
+    // console.log(vpn);
+    const popular = await vpn.miscPopularMovies();
+    expect(popular).toMatchSnapshot();
   });
 });
