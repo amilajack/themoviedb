@@ -35,7 +35,7 @@
     "chai": "^4.2.0",
     "cross-env": "^5.2.0",
     "dotenv": "^6.2.0",
-    "eslint": "^5.9.0",
+    "eslint": "^5.10.0",
     "eslint-config-bliss": "^3.1.1",
     "eslint-plugin-flowtype-errors": "^3.6.0",
     "flow-bin": "^0.87.0",
