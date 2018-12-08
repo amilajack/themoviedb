@@ -6,8 +6,10 @@ dotenv.config();
 describe('basic', () => {
   it('should setup()', async () => {
     const vpn = new OpenVpn();
-    // console.log(vpn);
-    const popular = await vpn.miscPopularMovies();
-    expect(popular).toMatchSnapshot();
+    const { results } = await vpn.miscPopularMovies();
+    const [item] = results;
+    expect(item.vote_count).toBeTruthy();
+    expect(item.title).toBeTruthy();
+    expect(results.length).toBeGreaterThanOrEqual(10);
   });
 });
