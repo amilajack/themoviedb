@@ -7,6 +7,7 @@
   "repository": "git://github.com/amilajack/themoviedb.git",
   "author": "Amila Welihinda <amiajack@gmail.com>",
   "main": "./dist",
+  "files": ["dist"],
   "keywords": [
     "moviedb",
     "themoviedb",
