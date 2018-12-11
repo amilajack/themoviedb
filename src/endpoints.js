@@ -35,6 +35,12 @@ export default {
         resource: 'movie/:id/alternative_titles',
         method: 'get'
       },
+      Latest: { resource: 'movie/latest', method: 'get' },
+      Upcoming: { resource: 'movie/upcoming', method: 'get' },
+      NowPlaying: { resource: 'movie/now_playing', method: 'get' },
+      Popular: { resource: 'movie/popular', method: 'get' },
+      TopRated: { resource: 'movie/top_rated', method: 'get' },
+      Changed: { resource: 'movie/changes', method: 'get' },
       Credits: { resource: 'movie/:id/credits', method: 'get' },
       Images: { resource: 'movie/:id/images', method: 'get' },
       Videos: { resource: 'movie/:id/videos', method: 'get' },
@@ -57,55 +63,60 @@ export default {
       Videos: { resource: 'tv/:id/videos', method: 'get' },
       Similar: { resource: 'tv/:id/similar', method: 'get' },
       Translations: { resource: 'tv/:id/translations', method: 'get' },
-      SeasonInfo: { resource: 'tv/:id/season/:season_number', method: 'get' },
+      SeasonInfo: { resource: 'tv/:id/season/:seasonNumber', method: 'get' },
       SeasonCredits: {
-        resource: 'tv/:id/season/:season_number/credits',
+        resource: 'tv/:id/season/:seasonNumber/credits',
         method: 'get'
       },
       SeasonVideos: {
-        resource: 'tv/:id/season/:season_number/videos',
+        resource: 'tv/:id/season/:seasonNumber/videos',
         method: 'get'
       },
       SeasonExternalIds: {
-        resource: 'tv/:id/season/:season_number/external_ids',
+        resource: 'tv/:id/season/:seasonNumber/external_ids',
         method: 'get'
       },
       SeasonImages: {
-        resource: 'tv/:id/season/:season_number/images',
+        resource: 'tv/:id/season/:seasonNumber/images',
         method: 'get'
       },
       EpisodeInfo: {
-        resource: 'tv/:id/season/:season_number/episode/:episode_number',
+        resource: 'tv/:id/season/:seasonNumber/episode/:episodeNumber',
         method: 'get'
       },
       EpisodeCredits: {
-        resource:
-          'tv/:id/season/:season_number/episode/:episode_number/credits',
+        resource: 'tv/:id/season/:seasonNumber/episode/:episodeNumber/credits',
         method: 'get'
       },
       EpisodeExternalIds: {
         resource:
-          'tv/:id/season/:season_number/episode/:episode_number/external_ids',
+          'tv/:id/season/:seasonNumber/episode/:episodeNumber/external_ids',
         method: 'get'
       },
       EpisodeImages: {
-        resource: 'tv/:id/season/:season_number/episode/:episode_number/images',
+        resource: 'tv/:id/season/:seasonNumber/episode/:episodeNumber/images',
         method: 'get'
       },
       OnTheAir: { resource: 'tv/on_the_air', method: 'get' },
       AiringToday: { resource: 'tv/airing_today', method: 'get' }
     },
     person: {
-      Info: { resource: 'person/:id', method: 'get' },
-      MovieCredits: { resource: 'person/:id/movie_credits', method: 'get' },
-      TvCredits: { resource: 'person/:id/tv_credits', method: 'get' },
-      CombinedCredits: {
-        resource: 'person/:id/combined_credits',
+      Info: { resource: 'person/:personId', method: 'get' },
+      MovieCredits: {
+        resource: 'person/:personId/movie_credits',
         method: 'get'
       },
-      Images: { resource: 'person/:id/images', method: 'get' },
-      TaggedImages: { resource: 'person/:id/tagged_images', method: 'get' },
-      Changes: { resource: 'person/:id/changes', method: 'get' },
+      TvCredits: { resource: 'person/:personId/tv_credits', method: 'get' },
+      CombinedCredits: {
+        resource: 'person/:personId/combined_credits',
+        method: 'get'
+      },
+      Images: { resource: 'person/:personId/images', method: 'get' },
+      TaggedImages: {
+        resource: 'person/:personId/tagged_images',
+        method: 'get'
+      },
+      Changes: { resource: 'person/:personId/changes', method: 'get' },
       Latest: { resource: 'person/latest', method: 'get' },
       Popular: { resource: 'person/popular', method: 'get' }
     },
@@ -142,16 +153,7 @@ export default {
       WatchlistUpdate: { resource: 'account/:id/watchlist', method: 'post' }
     },
     misc: {
-      LatestMovies: { resource: 'movie/latest', method: 'get' },
-      UpcomingMovies: { resource: 'movie/upcoming', method: 'get' },
-      NowPlayingMovies: { resource: 'movie/now_playing', method: 'get' },
-      PopularMovies: { resource: 'movie/popular', method: 'get' },
-      TopRatedMovies: { resource: 'movie/top_rated', method: 'get' },
-      ChangedMovies: { resource: 'movie/changes', method: 'get' },
-      ChangedTvs: { resource: 'tv/changes', method: 'get' },
-      ChangedPeople: { resource: 'person/changes', method: 'get' },
-      TopRatedTvs: { resource: 'tv/top_rated', method: 'get' },
-      PopularTvs: { resource: 'tv/popular', method: 'get' }
+      ChangedPeople: { resource: 'person/changes', method: 'get' }
     }
   }
 };
