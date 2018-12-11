@@ -8,14 +8,15 @@
   "author": "Amila Welihinda <amiajack@gmail.com>",
   "main": "./dist",
   "keywords": [
+    "moviedb",
     "themoviedb",
     "client",
+    "promise",
     "api",
     "json"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production babel src --out-dir dist",
-    "clean": "rm -rf dist",
+    "build": "rm -rf dist && cross-env NODE_ENV=production babel src --out-dir dist",
     "flow-typed": "flow-typed install",
     "lint": " eslint . --ignore-path .gitignore",
     "precommit": "yarn test",
@@ -49,7 +50,7 @@
     "isomorphic-fetch": "^2.2.1"
   },
   "engines": {
-    "node": ">=4.x",
+    "node": ">=10.x",
     "npm": ">=6.4.1"
   }
 }
