@@ -8,7 +8,7 @@ A Node API to [themovedb](https://www.themoviedb.org/?language=en-US)
 ## Usage
 
 ```js
-import TheMovieDb from 'themoviedb';
+import TheMovieDb from '@amilajack/themoviedb';
 
 const db = new TheMovieDb({
   apiKey: 'your-api-key-here'

@@ -1,5 +1,5 @@
 {
-  "name": "themoviedb",
+  "name": "@amilajack/themoviedb",
   "version": "0.0.1",
   "description": "themoviedb API client",
   "license": "MIT",
