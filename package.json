@@ -1,13 +1,15 @@
 {
   "name": "@amilajack/themoviedb",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "themoviedb API client",
   "license": "MIT",
   "homepage": "http://github.com/amilajack/themoviedb",
   "repository": "git://github.com/amilajack/themoviedb.git",
   "author": "Amila Welihinda <amiajack@gmail.com>",
   "main": "./dist",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "keywords": [
     "moviedb",
     "themoviedb",
