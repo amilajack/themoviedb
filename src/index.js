@@ -5,8 +5,8 @@ import endpoints from './endpoints';
 function replaceUrlParamsWithValues(url, params) {
   return url
     .replace(':id', params.id)
-    .replace(':season_number', params.season_number)
-    .replace(':episode_number', params.episode_number);
+    .replace(':seasonNumber', params.seasonNumber)
+    .replace(':episodeNumber', params.episodeNumber);
 }
 
 class TheMovieDb {
