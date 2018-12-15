@@ -18,7 +18,7 @@ Object {
   "original_language": "en",
   "original_title": "Fight Club",
   "overview": "A ticking-time-bomb insomniac and a slippery soap salesman channel primal male aggression into a shocking new form of therapy. Their concept catches on, with underground \\"fight clubs\\" forming in every town, until an eccentric gets in the way and ignites an out-of-control spiral toward oblivion.",
-  "popularity": 26.408,
+  "popularity": 0,
   "poster_path": "/adw6Lq9FiC9zjYEpOqfq03ituwp.jpg",
   "production_companies": Array [
     Object {
@@ -87,7 +87,7 @@ Object {
   "tagline": "Mischief. Mayhem. Soap.",
   "title": "Fight Club",
   "video": false,
-  "vote_average": 8.4,
-  "vote_count": 14471,
+  "vote_average": 0,
+  "vote_count": 0,
 }
 `;
