@@ -3,15 +3,6 @@ import TheMovieDb from '../src';
 
 dotenv.config();
 
-function removeDynamicProperties(obj) {
-  return {
-    ...obj,
-    popularity: 0,
-    vote_average: 0,
-    vote_count: 0
-  };
-}
-
 describe('basic', () => {
   let db;
 
@@ -29,6 +20,13 @@ describe('basic', () => {
 
   it('should get movie info', async () => {
     const result = await db.movieInfo({ id: 550 });
-    expect(removeDynamicProperties(result)).toMatchSnapshot();
+    expect(result).toMatchSnapshot({
+      poster_path: expect.any(String),
+      production_companies: expect.any(Array),
+      backdrop_path: expect.any(String),
+      popularity: expect.any(Number),
+      vote_average: expect.any(Number),
+      vote_count: expect.any(Number)
+    });
   });
 });
