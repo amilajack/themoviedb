@@ -26,13 +26,13 @@ class TheMovieDb {
   async getRequest(urlMethod: { resource: string }, params: Object = {}) {
     const { API_KEY, BASE_URL } = this;
 
-    const { language, page} = params;
+    const { language, page } = params;
 
     const urlParams = new URLSearchParams(
       Object.entries({
         api_key: API_KEY,
         language: language || 'en-US',
-        page: parseInt(page) || 1
+        page: parseInt(page, 10) || 1
       })
     ).toString();
 
