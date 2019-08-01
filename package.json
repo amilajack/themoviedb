@@ -44,7 +44,7 @@
     "eslint-config-bliss": "^3.4.0",
     "eslint-plugin-flowtype-errors": "^4.1.0",
     "flow-bin": "^0.104.0",
-    "flow-typed": "^2.5.2",
+    "flow-typed": "^2.6.1",
     "husky": "^2.7.0",
     "jest": "^24.8.0",
     "regenerator-runtime": "^0.13.2"
