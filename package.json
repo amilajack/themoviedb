@@ -55,5 +55,29 @@
   "engines": {
     "node": ">=10.x",
     "npm": ">=6.13.4"
+  },
+  "babel": {
+    "presets": [
+      ["@babel/preset-env", {
+        "targets": {
+          "node": 10
+        }
+      }],
+      "@babel/preset-flow"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-class-properties"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "bliss",
+    "rules": {
+      "flowtype-errors/show-errors": "warn"
+    }
+  },
+  "renovate": {
+    "extends": [
+      "bliss"
+    ]
   }
 }
